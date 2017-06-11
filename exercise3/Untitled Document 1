@@ -1,0 +1,69 @@
+Exercise 3
+
+HOW TO BREAK IT
+
+CASE 1- Take the age variable out from printf 
+
+Observation - Warning occurs %d format is not initialized hence it give a garbage value.
+
+OUTPUT
+I am 14196182	years old.
+I am 72	inches tall.
+
+CASE 2- Dont initialize the initial value while declaring variable.
+
+OBSERVATION- NO warning during make file but prints the garbage value.
+
+OUTPUT
+I am 2850804	years old.
+I am 72	inches tall.
+
+
+EXTRA CREDIT..
+
+CASE 1-Use %f instead of %d in printf statement.
+ printf("I am %f years old.\n", age);
+
+OBSERVATION- Warning: format ‘%f’ expects argument of type ‘double’, but argument 2 has type ‘int’.
+
+OUTPUT
+I am 0.000000	years old.
+I am 72	inches tall.
+
+CASE 2- Use %s instead of %d in printf statement
+printf("I am %s years old.\n", age);
+
+OBSERVATION- Warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’.
+
+OUTPUT
+I am |} years old.
+I am 72	inches tall.
+
+Format Characters-
+d,i for int
+o, u, x, X for unsigned int
+e,E for doubles
+f,F  for doubles
+g,G double argument is converted in style f or e
+a,A double argument converted to hexa decimal
+c for unsigned char
+s for string
+
+CASE3- Add ex3 to our Makefile's all list. Use this to make clean all and build all your exercises so far.
+
+CFLAGS = -Wall -g
+
+all: ex1 ex3
+
+clean:
+    rm -rf ex1 ex1.dSYM
+
+CASE 4- Add ex3 to our Makefile's clean list as well. Now use make clean will remove it when you need to.
+
+CFLAGS = -Wall -g
+
+all: ex1 ex3
+
+clean:
+    rm -rf ex1 ex1.dSYM ex3 ex3.dSYM
+
