@@ -1,0 +1,93 @@
+	THE LIST OF OPERATORS IN C
+       ''''''''''''''''''''''''''''
+A- Airthmatic Operator: Perfrom simple airthmatic operations.
+
+	 SYMBOLS	-	Description
+
+	    +			Add
+	    -			Subtract
+	    *			Multiply 
+	    /                   Divide
+            %			Modulus
+	   ++			Increment
+	   -- 			Decrement
+
+
+B- Relational Operators: Tests value for equality.
+	
+	SYMBOLS		-	DEscription
+	   
+	  ==			Equal
+	  !=			Not equal
+	  >			Greater than
+	  <			Smaller than
+	  >=			Greater than equal
+	  <=			Less than equal
+
+
+C-Logical operators: Tests logic
+	
+	SYMBOL		-	Description
+
+	  &			Bitwise and
+	  |			Bitwise or
+	  ^			Bitwise xor
+	  ~			Bitwise One's Compliment
+	  <<			Bitwise Shift left
+	  >>			Bitwise Shift Right
+
+
+D- Assignment Operators: Assign expression to varaibles.
+
+	SYMBOL         -        Description
+
+	  =			Assign eqaul
+	  +=			Assign plus equal
+	  -=                    Assign minus equal
+	  *= 			Assign multiply equal
+	  /= 			Assign Divide equal
+	  %=			Assign Modulo equal
+	 <<=			Assign right shift equal
+	 >>=			Assign left shift equal
+	  &=			Assign and equal
+	  |=			Assign Or equal
+	  ^=			Assign Xor equal
+
+
+E- Data Operators: Deals with elements of Data structure in C
+
+
+	Operators 		Description
+	
+	sizeof()		Get the size of
+	[]			Array subscript
+	& 			The address of
+	*			The value of
+	->			Structure dereference
+	.			Structure reference
+
+
+
+SOME OTHER COMMON SYMBOLS AND OPERATORS
+	
+	,			Comma
+	()			Paraentheses
+	{}			Braces
+	:			COlon
+	//			Single line comment
+	/*			Multi line comment opening
+	*/			Multi line comment ending
+
+
+
+Conditional Operator: (exp1 ? exp2:exp3)
+
+
+NOTE- PRECIDENCY : Airthmatic > Relational > Logical
+
+
+
+
+
+
+
