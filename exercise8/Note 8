@@ -1,0 +1,107 @@
+	
+
+
+HOW TO BREAK IT 
+
+CASE 1- Remove the ese at the end.
+
+
+if (argc == 1)
+	{
+		printf("You only have one arguement. You suck.\n");
+	}
+	else if ( argc > 1 && argc <4)
+	{	
+		printf("Here's your arguments:\n");
+
+		for ( i = 0; i< argc; i++)  {
+			printf("%s", argv[i]);
+		}
+		printf("\n");
+	} 
+
+
+OBSERVATION-
+Nothing happened, It runs successfully.
+Output:You only have one arguement. You suck.
+
+
+CASE 2-Change the && to	a || so	you	get an or instead of an and test.
+
+
+if (argc == 1)
+	{
+		printf("You only have one arguement. You suck.\n");
+	}
+	else if ( argc > 1 || argc <4)
+	{	
+		printf("Here's your arguments:\n");
+
+		for ( i = 0; i< argc; i++)  {
+			printf("%s", argv[i]);
+		}
+		printf("\n");
+	} 
+	else {
+		printf("You have too many arguments. You suck.\n");
+
+OBSERVATION-
+NO WARNING , NOTHING HAPPENED IT RUNS successFULY
+
+Output:You only have one arguement. You suck. 
+
+
+
+EXTRA CREDIT
+
+CASE 1-
+Boolean operators:
+
+&& - AND operator (binary)
+|| - OR operator (binary)
+!  - NOT operator (unary)
+
+
+CASE 2-Write a few more test cases.
+
+if (argc == 1)
+	{
+		printf("You only have one arguement. You suck.\n");
+	}
+	else if ( argc > 1 || argc <4)
+	{	
+		printf("Here's your arguments:\n");
+
+		for ( i = 0; i< argc; i++)  {
+			printf("%s", argv[i]);
+		}
+		printf("\n");
+	} 
+	else {
+		printf("You have too many arguments. You suck.\n");
+
+
+Observation:
+Output:You only have one arguement. You suck. 
+
+
+CASE 2- write a few more test
+
+if (argc!=1)
+	{
+		printf("You only have one arguement. You suck.\n");
+	}
+	else if ( argc > 1 || argc <4)
+	{	
+		printf("Here's your arguments:\n");
+
+		for ( i = 0; i< argc; i++)  {
+			printf("%s", argv[i]);
+		}
+		printf("\n");
+	} 
+	else {
+		printf("You have too many arguments. You suck.\n");
+
+Observation:
+Output:Here's your arguments
