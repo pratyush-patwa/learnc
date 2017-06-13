@@ -1,0 +1,70 @@
+
+How To Break It
+
+
+Print out nul_byte variable with %s
+
+printf("%s\n", nul_byte)
+
+ warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ [-Wformat=]
+     printf("%s\n", nul_byte);
+     ^
+It prints (null)
+
+
+Print out nul_byte variable with %c
+
+printf("%c\n", nul_byte);
+
+It runs successfully but it prints nothing.
+
+
+
+Extra Credit
+
+CASE 1:Make the number you assign to universe_of_defects various sizes until you get a warning from the compiler.
+
+I assigned universe_of_defects to 1L * 1024L * 1024L * 1024L * 1024L * 1024L * 1024L * 1024L, and I met the warning
+
+warning: integer overflow in expression [-Woverflow]
+     long universe_of_defects = 1L * 1024L * 1024L * 1024L * 1024L * 1024L * 1024L * 1024L;
+
+
+                                                                                  CASE 2:What do these really huge numbers actually print out?
+
+The entire universe has 0 bugs.
+
+
+
+CASE 3A: Change long to unsigned long and try to find the number that makes that one too big.
+
+Change long to unsigned long
+
+unsigned long universe_of_defects = 1UL * 1024UL * 1024UL * 1024UL;
+printf("The entire universe has %lu bugs.\n", universe_of_defects);
+
+
+
+CASE 3B: Try to find the number that makes that one too big
+
+We can  use ULONG_MAX to get the max value of unsigned long, then plus 1 to make it bigger:
+
+unsigned long universe_of_defects = ULONG_MAX + 1UL;
+printf("The entire universe has %lu bugs.\n", universe_of_defects);
+
+The output:
+
+The entire universe has 0 bugs.
+
+
+
+CASE 4:Go search online to find out what unsigned does.
+
+unsigned means the integer is not negative.
+
+
+
+CASE 5: Try to explain to yourself why you can multiply a char and an int.
+
+Char values are encoded as numbers using the ASCII encoding.
+
