@@ -1,0 +1,94 @@
+EXERCISE 9 (WHILE LOOP)
+
+
+HOW TO BREAK IT
+
+CASE 1- Forget to initialize Int i;
+
+int i;
+while(i<25)
+{  printf("%d\n",i);
+i++
+}
+
+RESULT- No Warning & NOthing is printed
+
+
+
+CASE 2-Forget to initialize the Second Loop 
+
+	int i=0;
+
+	{  	
+		printf("%d\n",i);
+		i++
+	}
+
+RESULT-No warning 
+OUTPUT- 0
+
+
+CASE 3- Dont write i++ at the end
+
+	int i=0;
+	while(i<25)
+	{  
+		printf("%d\n",i);
+
+	}
+
+RESULT-NO Warning but loop will go forever
+and prints 0
+
+
+
+
+
+EXTRA CREDIT
+
+
+CASE 1- Make the loop	count	backward by	using	i--	to start	at 25 and	go to 0.
+
+
+SOLUTION-
+
+		#include	<stdio.h>
+	
+			int	main(int	argc,	char	*argv[])
+			{
+							int	i	=	25;
+							while	(i>0)	
+								{
+								printf("%d",	i);
+												i--;
+								}
+					return	0;
+				}
+
+				}
+
+
+
+
+CASE 2-	Write	a	few	more complex while-loops using what	you	know so	far.
+
+
+SOLUTION-	
+
+		#include	<stdio.h>
+	
+			int	main(int	argc,	char	*argv[])
+			{
+							int	sum	=	0;
+              int i= 1;
+              while( sum<=20)
+              {
+                   sum = sum+i;
+                    i = i+1;
+               }
+               printf("sum= %d.\n",sum);
+        return 0;
+        }  
+
+
+
