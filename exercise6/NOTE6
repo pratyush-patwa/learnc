@@ -1,0 +1,20 @@
+Extra Credit
+
+
+
+1-Come up with other ways to break this C code by changing the printf, then fix them.
+
+ 1.A  Change %d to %s in printf("You are %d miles away.\n", distance);
+
+    
+
+
+OBSERVATION- Warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ [-Wformat=]
+         
+
+1.B Change %f to %d in printf("You have %f levels of power.\n", power);
+
+
+
+OBSERVATION- Warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘double’ [-Wformat=]
+
