@@ -1,0 +1,146 @@
+HOW TO BREAK IT
+
+CASE 1- Get rid of the '\0' at the end of full_name and rerun it. Run it under the debugger too. Now, move the definition of full_name to the top of main before areas. Try running it under the debugger a few times and see if you get some new errors.In some cases, you might still get lucky and not catch any errors.
+
+
+Observation- NO errors, No Warnings.
+The size of an int: 4 
+ The size of areas (int[]): 20 
+ The number of ints in areas: 5 
+ The first area is 10, the 2nd 12. 
+The size of a char: 1 
+ The size of_name (char[]): 11 
+The number of chars: 4 
+The size of full_name (char[])): 11 
+The number of chars : 11 
+name="zed" and  full_name="Zed A. shaw"
+==4219== 
+==4219== HEAP SUMMARY:
+==4219==     in use at exit: 0 bytes in 0 blocks
+==4219==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==4219== 
+==4219== All heap blocks were freed -- no leaks are possible
+==4219== 
+==4219== For counts of detected and suppressed errors, rerun with: -v
+==4219== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+* The size of Char and The number of char reduced to 11.
+
+
+CASE 2-  Change it so that	instead	of areas[0]	you	try	to print	areas[10]. See what	the	debugger thinks of that.
+
+
+
+OBSERVATION-
+The size of an int: 4 
+ The size of areas (int[]): 20 
+ The number of ints in areas: 5 
+==4472== Use of uninitialised value of size 4
+==4472==    at 0x409D24B: _itoa_word (_itoa.c:179)
+==4472==    by 0x40A7695: printf (printf.c:33)
+==4472==    by 0x4076636: (below main) (libc-start.c:291)
+==4472== 
+==4472== Conditional jump or move depends on uninitialised value(s)
+==4472==    at 0x409D253: _itoa_word (_itoa.c:179)
+==4472==    by 0x40A7695: printf (printf.c:33)
+==4472==    by 0x4076636: (below main) (libc-start.c:291)
+==4472== 
+==4472== Conditional jump or move depends on uninitialised value(s)
+==4472==    at 0x40A07A4: vfprintf (vfprintf.c:1631)
+==4472==    by 0x40A7695: printf (printf.c:33)
+==4472==    by 0x4076636: (below main) (libc-start.c:291)
+==4472== 
+==4472== Conditional jump or move depends on uninitialised value(s)
+==4472==    at 0x40A0CBD: vfprintf (vfprintf.c:1631)
+==4472==    by 0x40A7695: printf (printf.c:33)
+==4472==    by 0x4076636: (below main) (libc-start.c:291)
+==4472== 
+==4472== Conditional jump or move depends on uninitialised value(s)
+==4472==    at 0x40A0B04: vfprintf (vfprintf.c:1631)
+==4472==    by 0x40A7695: printf (printf.c:33)
+==4472==    by 0x4076636: (below main) (libc-start.c:291)
+==4472== 
+==4472== Conditional jump or move depends on uninitialised value(s)
+==4472==    at 0x40A0B4D: vfprintf (vfprintf.c:1631)
+==4472==    by 0x40A7695: printf (printf.c:33)
+==4472==    by 0x4076636: (below main) (libc-start.c:291)
+==4472== 
+ The first area is 69272540, the 2nd 12. 
+The size of a char: 1 
+ The size of_name (char[]): 12
+The number of chars: 4 
+The size of full_name (char[])): 12 
+The number of chars : 12 
+name="zed" and  full_name="Zed A. shaw"
+==4472== 
+==4472== HEAP SUMMARY:
+==4472==     in use at exit: 0 bytes in 0 blocks
+==4472==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==4472== 
+==4472== All heap blocks were freed -- no leaks are possible
+==4472== 
+==4472== For counts of detected and suppressed errors, rerun with: -v
+==4472== Use --track-origins=yes to see where uninitialised values come from
+==4472== ERROR SUMMARY: 20 errors from 6 contexts (suppressed: 0 from 0)
+
+
+CASE 3- Try other versions of these, doing it to name and full_name too.
+
+
+Try with name-
+printf("The first char of name is %c\n", name[5]);
+
+
+OBSERVATION- 
+
+The size of an int: 4 
+ The size of areas (int[]): 20 
+ The number of ints in areas: 5 
+ The first area is 10, the 2nd 12. 
+The size of a char: 1 
+ The size of_name (char[]): 12 
+The number of chars: 4 
+The size of full_name (char[])): 12 
+The number of chars : 12 
+name="zed" and  full_name="Zed A. shaw"
+The first char of name is e 
+==6239== 
+==6239== HEAP SUMMARY:
+==6239==     in use at exit: 0 bytes in 0 blocks
+==6239==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==6239== 
+==6239== All heap blocks were freed -- no leaks are possible
+==6239== 
+==6239== For counts of detected and suppressed errors, rerun with: -v
+==6239== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+Try with full_name-
+printf("The first char of full_name is %c\n", full_name[20]);
+
+
+OBSERVATION-
+
+
+The size of an int: 4 
+ The size of areas (int[]): 20 
+ The number of ints in areas: 5 
+ The first area is 10, the 2nd 12. 
+The size of a char: 1 
+ The size of_name (char[]): 12 
+The number of chars: 4 
+The size of full_name (char[])): 12 
+The number of chars : 12 
+name="zed" and  full_name="Zed A. shaw"
+The first char of full_ name is p 
+==6355== 
+==6355== HEAP SUMMARY:
+==6355==     in use at exit: 0 bytes in 0 blocks
+==6355==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==6355== 
+==6355== All heap blocks were freed -- no leaks are possible
+==6355== 
+==6355== For counts of detected and suppressed errors, rerun with: -v
+==6355== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
