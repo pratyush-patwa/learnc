@@ -44,7 +44,7 @@ int main(int argc, char* argv)
 			printf("%d",c);
 			break;
 		case '*':
-			c = a*b;
+			c = mul(a,b);
 			printf("%d",c);
 			break;
 			
